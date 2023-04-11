@@ -1,0 +1,80 @@
+==22643== Memcheck, a memory error detector
+==22643== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==22643== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==22643== Command: ./sort -m 32
+==22643== 
+==22643== 
+==22643== HEAP SUMMARY:
+==22643==     in use at exit: 1,638 bytes in 4 blocks
+==22643==   total heap usage: 16 allocs, 12 frees, 15,738 bytes allocated
+==22643== 
+==22643== 36 bytes in 1 blocks are still reachable in loss record 1 of 4
+==22643==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22643==    by 0x401CF09: strdup (strdup.c:42)
+==22643==    by 0x401861E: _dl_load_cache_lookup (dl-cache.c:311)
+==22643==    by 0x4009198: _dl_map_object (dl-load.c:2364)
+==22643==    by 0x40155B6: dl_open_worker (dl-open.c:237)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x4014DE8: _dl_open (dl-open.c:660)
+==22643==    by 0x519A6AC: do_dlopen (dl-libc.c:87)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x519A763: dlerror_run (dl-libc.c:46)
+==22643==    by 0x519A763: __libc_dlopen_mode (dl-libc.c:163)
+==22643==    by 0x4E4B91A: pthread_cancel_init (unwind-forcedunwind.c:52)
+==22643==    by 0x4E4BB03: _Unwind_ForcedUnwind (unwind-forcedunwind.c:126)
+==22643== 
+==22643== 36 bytes in 1 blocks are still reachable in loss record 2 of 4
+==22643==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22643==    by 0x400BF23: _dl_new_object (dl-object.c:165)
+==22643==    by 0x400653C: _dl_map_object_from_fd (dl-load.c:1028)
+==22643==    by 0x4008C56: _dl_map_object (dl-load.c:2498)
+==22643==    by 0x40155B6: dl_open_worker (dl-open.c:237)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x4014DE8: _dl_open (dl-open.c:660)
+==22643==    by 0x519A6AC: do_dlopen (dl-libc.c:87)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x519A763: dlerror_run (dl-libc.c:46)
+==22643==    by 0x519A763: __libc_dlopen_mode (dl-libc.c:163)
+==22643==    by 0x4E4B91A: pthread_cancel_init (unwind-forcedunwind.c:52)
+==22643==    by 0x4E4BB03: _Unwind_ForcedUnwind (unwind-forcedunwind.c:126)
+==22643== 
+==22643== 384 bytes in 1 blocks are still reachable in loss record 3 of 4
+==22643==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22643==    by 0x40120FD: _dl_check_map_versions (dl-version.c:293)
+==22643==    by 0x4015B58: dl_open_worker (dl-open.c:286)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x4014DE8: _dl_open (dl-open.c:660)
+==22643==    by 0x519A6AC: do_dlopen (dl-libc.c:87)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x519A763: dlerror_run (dl-libc.c:46)
+==22643==    by 0x519A763: __libc_dlopen_mode (dl-libc.c:163)
+==22643==    by 0x4E4B91A: pthread_cancel_init (unwind-forcedunwind.c:52)
+==22643==    by 0x4E4BB03: _Unwind_ForcedUnwind (unwind-forcedunwind.c:126)
+==22643==    by 0x4E4A06F: __pthread_unwind (unwind.c:121)
+==22643==    by 0x4E42844: __do_cancel (pthreadP.h:283)
+==22643==    by 0x4E42844: pthread_exit (pthread_exit.c:28)
+==22643== 
+==22643== 1,182 bytes in 1 blocks are still reachable in loss record 4 of 4
+==22643==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22643==    by 0x400BC25: _dl_new_object (dl-object.c:75)
+==22643==    by 0x400653C: _dl_map_object_from_fd (dl-load.c:1028)
+==22643==    by 0x4008C56: _dl_map_object (dl-load.c:2498)
+==22643==    by 0x40155B6: dl_open_worker (dl-open.c:237)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x4014DE8: _dl_open (dl-open.c:660)
+==22643==    by 0x519A6AC: do_dlopen (dl-libc.c:87)
+==22643==    by 0x40105A3: _dl_catch_error (dl-error.c:187)
+==22643==    by 0x519A763: dlerror_run (dl-libc.c:46)
+==22643==    by 0x519A763: __libc_dlopen_mode (dl-libc.c:163)
+==22643==    by 0x4E4B91A: pthread_cancel_init (unwind-forcedunwind.c:52)
+==22643==    by 0x4E4BB03: _Unwind_ForcedUnwind (unwind-forcedunwind.c:126)
+==22643== 
+==22643== LEAK SUMMARY:
+==22643==    definitely lost: 0 bytes in 0 blocks
+==22643==    indirectly lost: 0 bytes in 0 blocks
+==22643==      possibly lost: 0 bytes in 0 blocks
+==22643==    still reachable: 1,638 bytes in 4 blocks
+==22643==         suppressed: 0 bytes in 0 blocks
+==22643== 
+==22643== For counts of detected and suppressed errors, rerun with: -v
+==22643== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
