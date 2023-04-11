@@ -1,0 +1,164 @@
+==8773== Memcheck, a memory error detector
+==8773== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==8773== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==8773== Command: ./scheduler -t 4 -v --fcfs
+==8773== 
+==8773== 
+==8773== HEAP SUMMARY:
+==8773==     in use at exit: 2,304 bytes in 90 blocks
+==8773==   total heap usage: 234 allocs, 144 frees, 20,618 bytes allocated
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 1 of 20
+==8773==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x404D04: create_job_scheduler (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40330D: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 2 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x40208F: _create (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402244: h_set_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403364: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 3 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4020BD: _create (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402244: h_set_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403364: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 4 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4020EB: _create (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402244: h_set_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403364: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 5 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x401697: scheduler (scheduler.c:22)
+==8773==    by 0x40341B: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 16 bytes in 1 blocks are still reachable in loss record 6 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4016B7: scheduler (scheduler.c:25)
+==8773==    by 0x40341B: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 24 bytes in 1 blocks are still reachable in loss record 7 of 20
+==8773==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x404CF1: create_job_scheduler (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40330D: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 24 bytes in 1 blocks are still reachable in loss record 8 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x400CF2: create_node (linkedlist.c:21)
+==8773==    by 0x400E72: push_at_tail (linkedlist.c:80)
+==8773==    by 0x401D32: sys_exec (scheduler.c:159)
+==8773==    by 0x4024B7: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 24 bytes in 1 blocks are still reachable in loss record 9 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x40365E: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 24 bytes in 1 blocks are still reachable in loss record 10 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x401F2A: stats (scheduler.c:198)
+==8773==    by 0x402E13: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 24 bytes in 1 blocks are indirectly lost in loss record 11 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x400CF2: create_node (linkedlist.c:21)
+==8773==    by 0x400E72: push_at_tail (linkedlist.c:80)
+==8773==    by 0x401D32: sys_exec (scheduler.c:159)
+==8773==    by 0x4024B7: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 64 bytes in 4 blocks are still reachable in loss record 12 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x404B45: js_enqueue (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x404DCE: create_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40334E: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 72 (48 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 13 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x400CF2: create_node (linkedlist.c:21)
+==8773==    by 0x400E72: push_at_tail (linkedlist.c:80)
+==8773==    by 0x401D32: sys_exec (scheduler.c:159)
+==8773==    by 0x4024B7: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 96 bytes in 1 blocks are still reachable in loss record 14 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x40367D: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 96 bytes in 1 blocks are still reachable in loss record 15 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x401F49: stats (scheduler.c:199)
+==8773==    by 0x402E13: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 96 bytes in 4 blocks are still reachable in loss record 16 of 20
+==8773==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4021D4: _enqueue (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40228B: h_set_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403364: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 96 bytes in 4 blocks are still reachable in loss record 17 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x400CF2: create_node (linkedlist.c:21)
+==8773==    by 0x400E72: push_at_tail (linkedlist.c:80)
+==8773==    by 0x401CF5: sys_exec (scheduler.c:156)
+==8773==    by 0x4024B7: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 112 bytes in 4 blocks are still reachable in loss record 18 of 20
+==8773==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x400D53: meta_init (linkedlist.c:37)
+==8773==    by 0x400D30: create_node (linkedlist.c:28)
+==8773==    by 0x400E72: push_at_tail (linkedlist.c:80)
+==8773==    by 0x401CF5: sys_exec (scheduler.c:156)
+==8773==    by 0x4024B7: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 160 bytes in 4 blocks are still reachable in loss record 19 of 20
+==8773==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4063DD: create_process (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x404DB4: create_processes (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40334E: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== 1,320 bytes in 55 blocks are still reachable in loss record 20 of 20
+==8773==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8773==    by 0x4023C3: save_usage (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x4026DD: harnessing (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x40514E: start_simulate (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x403654: start (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773==    by 0x402DE4: main (in /afs/cats.ucsc.edu/users/d/ggravall/CSE130/Assignment4/scheduler)
+==8773== 
+==8773== LEAK SUMMARY:
+==8773==    definitely lost: 48 bytes in 2 blocks
+==8773==    indirectly lost: 24 bytes in 1 blocks
+==8773==      possibly lost: 0 bytes in 0 blocks
+==8773==    still reachable: 2,232 bytes in 87 blocks
+==8773==         suppressed: 0 bytes in 0 blocks
+==8773== 
+==8773== For counts of detected and suppressed errors, rerun with: -v
+==8773== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
